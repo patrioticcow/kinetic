@@ -4,6 +4,8 @@ chrome.extension.sendMessage({}, function (response) {
 			clearInterval(readyStateCheckInterval);
 			var L = localStorage;
 
+			if(L.scroller === undefined) L.scroller = 'no';
+
 			// todo make the settings work
 			var sensitivity = L.sensitivity && !isNaN(L.sensitivity) ? parseFloat(L.sensitivity) * 100 : 6;
 			var maxvelocity = L.maxvelocity && !isNaN(L.maxvelocity) ? parseFloat(L.maxvelocity) * 100 : 40;
