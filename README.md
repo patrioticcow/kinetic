@@ -3,7 +3,7 @@ Kinetic
 
 Kinetic Web Page. Browse like an expert
 
-https://chrome.google.com/webstore/detail/hcbmgkjgccgcheamdaoclehiafbgpjgi
+https://chrome.google.com/webstore/detail/kinetic-web-page/bippgmnfbeigidfdhhjolbflkchdafjp
 
 Copyright (c) 2014 Cristi Citea
 
