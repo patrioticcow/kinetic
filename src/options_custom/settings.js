@@ -4,7 +4,7 @@ window.addEvent("domready", function () {
         //settings.manifest.myButton.addEvent("action", function () {
         //    alert("You clicked me!");
         //});
-
+	    localStorage.test = 'test';
         var yaxis = localStorage.getItem("store.settings.kinetic_jaxis");
         if (!yaxis) localStorage.setItem("store.settings.kinetic_jaxis", 'yes');
         chrome.storage.sync.set({'yaxis': yaxis});

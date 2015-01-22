@@ -5,8 +5,18 @@
 //});
 
 //example of using a message handler from the inject scripts
-//chrome.extension.onMessage.addListener(
-//	function (request, sender, sendResponse) {
-//		chrome.pageAction.show(sender.tab.id);
-//		sendResponse();
-//	});
+chrome.extension.onMessage.addListener(
+	function (request, sender, sendResponse) {
+		if (request.newIconPath !== undefined) changeIcon(request.newIconPath, sender);
+
+		sendResponse();
+	});
+
+
+function changeIcon(val, sender) {
+	var icon = val === 'attach' ? "icons/icon48u.png" : "icons/icon48.png";
+	chrome.browserAction.setIcon({
+		path: icon,
+		tabId: sender.tab.id
+	});
+}
