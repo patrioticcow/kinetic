@@ -8,7 +8,7 @@ this.manifest = {
 			"group": "Zoom",
 			"name": "zoom_sensitivity",
 			"type": "slider",
-			"label": "Sensitivity:",
+			"label": "Sensitivity (default 6):",
 			"max": 1,
 			"min": 0,
 			"step": 0.01,
@@ -22,7 +22,7 @@ this.manifest = {
 			"group": "Zoom",
 			"name": "default_snap",
 			"type": "popupButton",
-			"label": "Snap to default",
+			"label": "Snap to default (default Yes)",
 			"options": {
 				"values": [
 					{
@@ -41,7 +41,7 @@ this.manifest = {
 			"group": "Kinetic",
 			"name": "kinetic_slowdown",
 			"type": "slider",
-			"label": "Slowdown:",
+			"label": "Slowdown (default 9):",
 			"max": 1,
 			"min": 0,
 			"step": 0.01,
@@ -55,7 +55,7 @@ this.manifest = {
 			"group": "Kinetic",
 			"name": "kinetic_maxvelocity",
 			"type": "slider",
-			"label": "Max Velocity:",
+			"label": "Max Velocity (default 40):",
 			"max": 1,
 			"min": 0,
 			"step": 0.01,
@@ -69,7 +69,7 @@ this.manifest = {
 			"group": "Kinetic",
 			"name": "kinetic_throttleFPS",
 			"type": "slider",
-			"label": "Throttle FPS:",
+			"label": "Throttle FPS (default 60):",
 			"max": 1,
 			"min": 0,
 			"step": 0.01,
@@ -81,9 +81,9 @@ this.manifest = {
 		{
 			"tab": "Details",
 			"group": "Kinetic",
-			"name": "xaxis",
+			"name": "kinetic_xaxis",
 			"type": "popupButton",
-			"label": "X Axis Movement",
+			"label": "X Axis Movement (default Yes)",
 			"options": {
 				"values": [
 					{
@@ -100,9 +100,9 @@ this.manifest = {
 		{
 			"tab": "Details",
 			"group": "Kinetic",
-			"name": "yaxis",
+			"name": "kinetic_yaxis",
 			"type": "popupButton",
-			"label": "Y Axis Movement",
+			"label": "Y Axis Movement (default Yes)",
 			"options": {
 				"values": [
 					{
@@ -127,8 +127,8 @@ this.manifest = {
 			"kinetic_throttleFPS"
 		],
 		[
-			"xaxis",
-			"yaxis"
+			"kinetic_xaxis",
+			"kinetic_yaxis"
 		]
 	]
 };

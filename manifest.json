@@ -28,6 +28,7 @@
     "contentSettings",
     "contextMenus",
     "notifications",
+    "storage",
     "https://*/*",
     "http://*/*"
   ],
