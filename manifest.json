@@ -1,11 +1,12 @@
 {
   "name": "Kinetic Web Page",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "manifest_version": 2,
   "description": "Kinetic Web Page. Browse like an expert",
   "homepage_url": "http://massinfluix.com",
   "icons": {
     "16": "icons/icon16.png",
+    "19": "icons/icon19.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },

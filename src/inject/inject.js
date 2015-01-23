@@ -28,8 +28,8 @@ chrome.extension.sendMessage({}, function (response) {
 
 			// zoom function
 			window.onmousewheel = function (e) {
-				console.log('onmousewheel');
-				console.log(L.scroller);
+				//console.log('onmousewheel');
+				//console.log(L.scroller);
 				if (L.scroller !== undefined && L.scroller === 'yes') {
 					e.preventDefault();
 
