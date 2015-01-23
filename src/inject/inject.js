@@ -4,7 +4,7 @@ chrome.extension.sendMessage({}, function (response) {
 			clearInterval(readyStateCheckInterval);
 			var L = localStorage;
 
-			if(L.scroller === undefined) L.scroller = 'no';
+			L.scroller = 'no'; // set default
 
 			// todo make the settings work
 			var sensitivity = L.sensitivity && !isNaN(L.sensitivity) ? parseFloat(L.sensitivity) * 100 : 6;
@@ -28,7 +28,9 @@ chrome.extension.sendMessage({}, function (response) {
 
 			// zoom function
 			window.onmousewheel = function (e) {
-				if (L.scroller === 'yes') {
+				console.log('onmousewheel');
+				console.log(L.scroller);
+				if (L.scroller !== undefined && L.scroller === 'yes') {
 					e.preventDefault();
 
 					var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
