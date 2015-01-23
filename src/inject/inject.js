@@ -26,6 +26,7 @@ chrome.extension.sendMessage({}, function (response) {
 
 			$scroller = body.kinetic('detach');
 
+			// zoom function
 			window.onmousewheel = function (e) {
 				if (L.scroller === 'yes') {
 					e.preventDefault();
@@ -43,6 +44,26 @@ chrome.extension.sendMessage({}, function (response) {
 				}
 			};
 
+			// use triple click
+			var timer, timeout = 200;
+
+			window.addEventListener("dblclick", function (evt) {
+				timer = setTimeout(function () {
+					timer = null;
+				}, timeout);
+			});
+
+			window.addEventListener("click", function (evt) {
+				if (timer) {
+					storeScroller();
+					setupScroller();
+
+					clearTimeout(timer);
+					timer = null;
+				}
+			});
+
+			// for the double click (disabled)
 			document.onmousedown = handleMouseEvent;
 			document.onmouseup = handleMouseEvent;
 			document.onclick = handleMouseEvent;
@@ -69,6 +90,7 @@ function setupScroller() {
 	}
 }
 
+// double click, not used
 function handleMouseEvent(e) {
 	var evt = (e == null ? event : e);
 	var clickType = 'LEFT';
@@ -83,8 +105,8 @@ function handleMouseEvent(e) {
 	}
 
 	if (evt.type === 'dblclick') {
-		storeScroller();
-		setupScroller();
+		//storeScroller();
+		//setupScroller();
 	}
 
 	//console.log(evt.type + ': ' + clickType + ' button!');
